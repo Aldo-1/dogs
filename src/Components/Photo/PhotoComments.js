@@ -1,6 +1,6 @@
 import React from "react";
 
-const PhotoComments = () => {
+const PhotoComments = ({ id, comments }) => {
   return <div></div>;
 };
 
