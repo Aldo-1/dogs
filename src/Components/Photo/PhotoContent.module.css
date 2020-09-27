@@ -9,10 +9,10 @@
   overflow: hidden;
   opacity: 0;
   transform: scale(0.8);
-  animation: enter 0.3s forwards;
+  animation: scaleUp 0.3s forwards;
 }
 
-@keyframes enter {
+@keyframes scaleUp {
   to {
     opacity: initial;
     transform: initial;
@@ -23,7 +23,7 @@
   padding: 2rem 2rem 0 2rem;
 }
 
-img {
+.img {
   grid-row: 1/4;
 }
 
@@ -34,7 +34,7 @@ img {
 @media (max-width: 64rem) {
   .photo {
     height: auto;
-    max-height: calc(100vh-4rem);
+    max-height: calc(100vh - 4rem);
     overflow-y: auto;
     grid-template-columns: minmax(20rem, 40rem);
   }
@@ -57,8 +57,8 @@ img {
 
 .visualizacoes::before {
   content: "";
-  width: 16px;
   display: inline-block;
+  width: 16px;
   height: 10px;
   margin-right: 0.5rem;
   background: url("../../Assets/visualizacao-black.svg");
