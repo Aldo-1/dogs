@@ -6,6 +6,7 @@ import useFetch from "../../Hooks/useFetch";
 import Error from "../Helper/Error";
 
 import { PASSWORD_LOST } from "../../api";
+import Head from "../Helper/Head";
 
 function LoginPasswordLost() {
   const login = useForm();
@@ -13,7 +14,7 @@ function LoginPasswordLost() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    console.log(login.value);
+
     if (login.validate()) {
       const { url, options } = PASSWORD_LOST({
         login: login.value,
@@ -25,6 +26,8 @@ function LoginPasswordLost() {
   }
   return (
     <section>
+      <Head title="Perdeu a senha" />
+
       <h1 className="title">Perdeu a senha ?</h1>
       {data ? (
         <p style={{ color: "#4c1" }}>{data}</p>
