@@ -42,9 +42,9 @@ function useForm(type) {
     value,
     setValue,
     onChange,
+    error,
     validate: () => validate(value),
     onBlur: () => validate(value),
-    error,
   };
 }
 
