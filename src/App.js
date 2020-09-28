@@ -1,15 +1,17 @@
 import React from "react";
 import "./App.css";
 
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Components/Home";
-import Login from "./Components/Login/Login";
 
 import { UserStorage } from "./UserContext";
+
+import Header from "./Components/Header";
+import Photo from "./Components/Photo/Photo";
 import User from "./Components/User/User";
 import ProtectedRoute from "./Components/Helper/ProtectedRoute";
+import Home from "./Components/Home";
+import Login from "./Components/Login/Login";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login/*" element={<Login />} />
             <ProtectedRoute path="/conta/*" element={<User />} />
+            <Route path="/foto/:id" element={<Photo />} />
           </Routes>
           <Footer />
         </UserStorage>
