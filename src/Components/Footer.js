@@ -4,7 +4,7 @@ import { ReactComponent as Dogs } from "../Assets/dogs-footer.svg";
 
 function Footer() {
   return (
-    <div className={styles.Footer}>
+    <div className={styles.footer}>
       <Dogs />
       <p>Dogs. Alguns direitos reservados</p>
     </div>
